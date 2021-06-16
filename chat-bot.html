@@ -95,6 +95,12 @@
 					window.scrollTo(0, document.body.scrollHeight);
 				}
 			});
+
+			socket.on("show", (msg) => {
+				const name = document.createElement("p");
+				name.innerText += msg;
+				messages.appendChild(name);
+			});
 		</script>
 	</body>
 </html>
